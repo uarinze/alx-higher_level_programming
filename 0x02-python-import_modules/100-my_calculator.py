@@ -15,18 +15,12 @@ if __name__ == "__main__":
         print("{}".format("Usage: ./100-calculator.py <a> <operator> <b>"))
         sys.exit(1)
 
-    operator = sys.argv[2]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
 
-    if operator == '+':
-        print("{:d} + {:d} = {:d}".format(a, b, add(a,b)))
-    elif operator == '-':
-        print("{:d} - {:d} = {:d}".format(a, b, sub(a,b)))
-    elif operator == '*':
-        print("{:d} * {:d} = {:d}".format(a, b, mul(a,b)))
-    elif operator == '/':
-        print("{:d} / {:d} = {:d}".format(a, b, div(a,b)))
-    else:
-        print("{:s}".format("Unknown operator. Available operators: +, -, * and /"))
+    operators = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(operators.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
+
+    print("{} {} {} = {}".format(a, sys.argv[2], b, operators[sys.argv[2]](a, b)))
