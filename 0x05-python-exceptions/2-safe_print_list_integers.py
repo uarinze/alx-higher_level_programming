@@ -11,8 +11,9 @@ def safe_print_list_integers(my_list=[], x=0):
     size = 0
     for i in range(x):
         try:
-            print("{:d}".format(my_list[i]), end="" )
-            size += 1
+            if isinstance(my_list, int):
+                print("{:d}".format(my_list[i]), end="" )
+                size += 1
         except:
             size += 1
             continue
