@@ -14,7 +14,7 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             print("{:d}".format(my_list[i]), end="")
             size += 1
-        except (IndexError, ValueError, TypeError):
+        except (ValueError, TypeError, IndexError):
             continue
     print()
     return (size)
