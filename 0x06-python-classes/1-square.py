@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is a class of sqaure"""
 
 
 class Square:
