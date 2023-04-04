@@ -4,13 +4,13 @@
 
 class Square:
     """This is a sqaure"""
-    def __init__(self, size = 0):
+    def __init__(self, size=0):
         """The init method that initialises the fields for each instance.
 
         Args:
             size: this is an optional int field.
         """
-        if (isinstance(size, int) != True):
+        if (isinstance(size, int) is False):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
