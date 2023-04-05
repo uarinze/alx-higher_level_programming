@@ -39,7 +39,7 @@ class Square:
         if isinstance(value, tuple) is not True \
                 or (value[0] < 0 or value[1] < 0)\
                 or len(value) != 2\
-                or not all(isinstance(value, int)):
+                or not all(isinstance(ind, int) for ind in value):
             raise TypeError("position must be a tupple\
                     of two positive integers")
         else:
