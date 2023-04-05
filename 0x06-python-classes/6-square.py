@@ -37,8 +37,8 @@ class Square:
     def position(self, value):
         """this sets the position"""
         if isinstance(value, tuple) is not True \
-                or (value[0] < 0 or value[1] < 0)\
-                or len(value) != 2\
+                or all(idx < 0 for idx in value)\
+                or len(value) is not 2\
                 or not all(isinstance(ind, int) for ind in value):
             raise TypeError("position must be a tupple\
                     of two positive integers")
