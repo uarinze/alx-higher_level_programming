@@ -10,6 +10,7 @@ class Square:
             size: the size o the square
         """
         self.__size = size
+
     @property
     def size(self):
         """This is a property getter thatretrieves the value of size."""
@@ -39,4 +40,3 @@ class Square:
                 print()
         elif self.__size == 0:
             print()
-   
