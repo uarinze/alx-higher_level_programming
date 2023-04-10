@@ -48,10 +48,12 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """prints the rectangle"""
-        shape = []
+        """prints the rectangle
+        rectangle blocks are represented in #
+        """
         if self.__height == 0 or self.__width == 0:
-            return ""
+            return ("")
+        shape = []
         for i in range(self.__height):
             for j in range(self.__width):
                 [shape.append("#")]
