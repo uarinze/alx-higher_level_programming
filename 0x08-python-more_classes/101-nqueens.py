@@ -88,6 +88,7 @@ def recursive_solve(board, row, queens, solutions):
                                         queens + 1, solutions)
     return (solutions)
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
