@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+
 
     """Function that returns true if the
     object is exactly an instance of the specified class;
