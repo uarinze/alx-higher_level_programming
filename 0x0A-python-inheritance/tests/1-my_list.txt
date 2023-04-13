@@ -114,3 +114,53 @@ The method prints the list in ascending sorted order.
 
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
+
+The order of the original list is not altered after a call to the method.
+
+---
+
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Note that lists of strings are sorted lexographically.
+
+---
+
+    >>> my_list = MyList()
+    >>> my_list.append("Banana")
+    >>> my_list.append("Apple")
+    >>> my_list.append("Pear")
+    >>> my_list.append("Guava")
+    >>> my_list.append("Strawberry")
+    >>> print(my_list)
+    ['Banana', 'Apple', 'Pear', 'Guava', 'Strawberry']
+
+---
+
+    >>> my_list.print_sorted()
+    ['Apple', 'Banana', 'Guava', 'Pear', 'Strawberry']
+
+Another friendly reminder that the original list is unaltered
+
+---
+
+    >>> print(my_list)
+    ['Banana', 'Apple', 'Pear', 'Guava', 'Strawberry']
+
+Nothing to sort with empty lists.
+
+---
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+If ``print_sorted(...)`` is called on a list of different types, a TypeError
+will be raised.
+
+---
+
+    >>> my_list = MyList([1, "Apple", "Tree", 5])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: unorderable types: str() < int()
