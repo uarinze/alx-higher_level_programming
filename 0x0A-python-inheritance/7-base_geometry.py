@@ -2,7 +2,7 @@
 """A basegeometry class"""
 
 
-class BaseGeometry:
+class BaseGeometry(object):
     """A class that does nothing."""
 
     def area(self):
