@@ -1,4 +1,4 @@
-#!/str/bin/python3
+#!/usr/bin/python3
 '''function that creates an Object from a “JSON file'''
 import json
 
