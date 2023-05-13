@@ -12,7 +12,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-    
+
     @property
     def height(self):
         '''get height'''
