@@ -5,7 +5,6 @@
 class Base:
     '''Base class for all other classes in this project'''
 
-    #private class attribute
     __nb_objects = 0
 
     def __init__(self, id=None):
