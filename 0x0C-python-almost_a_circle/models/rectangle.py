@@ -75,12 +75,17 @@ class Rectangle(Base):
 
     def display(self):
         '''prints in stdout the rectangle instance with the character #'''
+        for j in range(self.y):
+            print()
         for i in range(self.height):
+            for k in range(self.x):
+                print(" ", end="")
             for j in range(self.width):
                 print("#", end="")
             print()
 
     def __str__(self):
+        '''prints out a formated output to stdout'''
         return "[{}] ({}) {}/{} - {}/{}".format(__class__.__name__,
                                                 self.id, self.x,
                                                 self.y, self.width,
