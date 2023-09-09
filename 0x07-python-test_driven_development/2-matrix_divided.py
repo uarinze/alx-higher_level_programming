@@ -15,7 +15,7 @@ def matrix_divided(matrix, div):
     Returns:
     A new matrix representing the result of the division.
     """
-    if type(matrix) is not list or matrix == [] \      
+    if type(matrix) is not list or matrix == [] \
             or not all(isinstance(row, list) for row in matrix) \
             or not all((isinstance(num, int) or isinstance(num, float))
                      for num in [item for row in matrix for item in row]):
