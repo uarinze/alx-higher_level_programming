@@ -26,6 +26,6 @@ class Square(Rectangle):
         return "[{}] ({}) {}/{} - {}".format(
                 self.__class__.__name__, self.id, self.x, self.y, self.size)
 
-    def update(self, *args, **kwargs):
-        '''this assigns attributes to the square class''
+#    def update(self, *args, **kwargs):
+#        '''this assigns attributes to the square class''
 
