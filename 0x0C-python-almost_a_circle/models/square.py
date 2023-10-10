@@ -28,7 +28,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         '''this assigns attributes to the square class'''
-        if args and  len(args) != 0:
+        if args and len(args) != 0:
             count = 0
             for i in args:
                 if count == 0:
