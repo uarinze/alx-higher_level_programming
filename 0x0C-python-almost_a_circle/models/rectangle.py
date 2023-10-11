@@ -118,6 +118,7 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
     def to_dictionary(self):
         '''returns the dictionary reoresentation of a Rectangle'''
         return {
