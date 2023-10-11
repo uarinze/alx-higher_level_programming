@@ -31,18 +31,18 @@ class Square(Rectangle):
         if args and len(args) != 0:
             count = 0
             for i in args:
-                if count == 0:
+                count += 1
+                if count == 1:
                     if args is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = i
-                elif count == 1:
-                    self.size = i
                 elif count == 2:
-                    self.x = i
+                    self.size = i
                 elif count == 3:
+                    self.x = i
+                elif count == 4:
                     self.y = i
-                count += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
@@ -57,3 +57,12 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
+        def to_dictionary(self):
+            ''' returns a dictionary representation of a square.'''
+            return {
+                "id": self.id,
+                "size": self.size
+                "x": self.x
+                "y": self.y
+             }
